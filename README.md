@@ -1,22 +1,21 @@
-# Lotus & Champa Company
+# Lotus & Champa
 **Kết nối văn hoá Việt — Lào**
 
-> *Nơi văn hoá được chạm, nếm và mang về.*
+> Nơi văn hoá được chạm, nếm và mang về.
 
-## Mở website ngay
+Website chạy **trực tiếp từ GitHub** — không chuyển hướng sang Netlify.
 
-- Xem trực tiếp: https://raw.githack.com/phiphakone/Lotus-Champa/main/index.html
-- Mã nguồn: https://github.com/phiphakone/Lotus-Champa
+## Mở website ngay (từ file GitHub)
 
-### Bật GitHub Pages (link đẹp lâu dài)
-1. Vào repo → **Settings** → **Pages**
-2. Source: **Deploy from a branch**
-3. Branch: `main` / folder `/ (root)`
-4. Save. Sau 1–2 phút website là:
+1. https://raw.githack.com/phiphakone/Lotus-Champa/main/index.html
+2. https://htmlpreview.github.io/?https://github.com/phiphakone/Lotus-Champa/blob/main/index.html
+
+## Bật GitHub Pages (để có link .github.io)
+
+1. Mở https://github.com/phiphakone/Lotus-Champa/settings/pages
+2. Build and deployment → Source: **GitHub Actions**  
+   *hoặc* Deploy from a branch → `main` / `/ (root)` → Save
+3. Đợi 1–2 phút rồi mở:
    **https://phiphakone.github.io/Lotus-Champa/**
 
-## Đã có trên web
-- Trang chủ, lọc sản phẩm Việt / Lào / OCOP / bản sắc / xu hướng / quà
-- Giỏ hàng demo (lưu trên trình duyệt)
-- Form liên hệ
-- Logo và danh mục sản phẩm từ Phụ lục 4
+Repo: https://github.com/phiphakone/Lotus-Champa
