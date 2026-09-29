@@ -1,32 +1,153 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lotus & Champa — Kết nối văn hoá Việt Lào</title>
-  <style>
-    :root { --navy:#1B2A4E; --gold:#C9A961; --cream:#FAF5EB; }
-    * { box-sizing:border-box; margin:0; padding:0 }
-    body { font-family: Georgia, 'Times New Roman', serif; background:var(--cream); color:var(--navy); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:32px }
-    .card { max-width:640px; background:#fff; border:1px solid #E5DCC8; border-radius:24px; padding:40px 36px; box-shadow:0 20px 60px rgba(27,42,78,.12) }
-    h1 { font-size:2rem; margin-bottom:8px }
-    .tag { font-style:italic; color:#A8893F; margin-bottom:20px }
-    p { line-height:1.65; margin-bottom:14px }
-    a { color:var(--navy); font-weight:600 }
-    ul { margin:12px 0 20px 22px; line-height:1.7 }
-  </style>
-</head>
-<body>
-  <main class="card">
-    <h1>Lotus & Champa</h1>
-    <p class="tag">Nơi văn hoá được chạm, nếm và mang về</p>
-    <p>Công ty kết nối đặc sản OCOP Quảng Ninh và văn hoá Lào — ẩm thực, quà lưu niệm, không gian trải nghiệm.</p>
-    <ul>
-      <li><a href="https://github.com/phiphakone/Lotus-Champa">Mã nguồn GitHub</a></li>
-      <li><a href="docs/SAN-PHAM.md">Danh mục sản phẩm</a></li>
-      <li><a href="docs/DU-AN.md">Tóm tắt dự án</a></li>
-    </ul>
-    <p>Website bán hàng đầy đủ (ảnh + giỏ hàng + đa ngôn ngữ) nằm ở file <code>lotus-champa-2.html</code> — hãy đẩy file này vào thư mục <code>website/</code> rồi bật GitHub Pages.</p>
-  </main>
-</body>
-</html>
+<html lang="vi"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Lotus & Champa — Kết nối văn hoá Việt Lào</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#C9A961;--n:#1B2A4E;--nd:#0F1B33;--bg:#FBF8F1;--ln:#E5DCC8;--t:#B85C3A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:#1a1a1a;line-height:1.6}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{font-family:inherit;border:0;background:0;cursor:pointer}
+.top{background:var(--nd);color:var(--g);text-align:center;padding:8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+header{position:sticky;top:0;background:rgba(251,248,241,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln);z-index:20}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;background:#fff}
+.brand b{font-family:Fraunces,serif;color:var(--n)}
+.brand small{display:block;color:#A8893F;font-style:italic;font-size:.78rem}
+.links a{margin:0 8px;font-size:.9rem}
+.cart{background:var(--n);color:#fff;border-radius:99px;padding:8px 14px;position:relative}
+.badge{position:absolute;top:-7px;right:-7px;background:var(--t);color:#fff;border-radius:99px;min-width:18px;height:18px;font-size:11px;display:grid;place-items:center}
+.hero{text-align:center;padding:48px 16px 24px}
+h1{font-family:Fraunces,serif;color:var(--n);font-size:clamp(1.8rem,5vw,3.1rem);line-height:1.15}
+.lead{max-width:620px;margin:14px auto 22px;color:#444}
+.btn{display:inline-block;padding:11px 20px;border-radius:99px;margin:4px;font-weight:600}
+.gold{background:var(--g);color:var(--nd)}.navy{background:var(--n);color:#fff}
+.filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 22px}
+.chip{padding:7px 12px;border:1px solid var(--ln);border-radius:99px;background:#fff;font-size:.84rem}
+.chip.on{background:var(--n);color:#fff}
+.grid{max-width:1100px;margin:auto;padding:0 16px 48px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--ln);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 20px rgba(27,42,78,.07)}
+.pic{height:150px;background:#f0eadb} .pic img{width:100%;height:100%;object-fit:cover}
+.body{padding:12px;display:flex;flex-direction:column;flex:1}
+.tag{font-size:11px;color:#A8893F;text-transform:uppercase;letter-spacing:.06em}
+h3{color:var(--n);font-size:1rem;margin:4px 0}
+.desc{font-size:.82rem;color:#666;flex:1}
+.price{font-weight:600;margin:8px 0;color:var(--n)}
+.add{background:var(--n);color:#fff;border-radius:10px;padding:8px}
+section h2{font-family:Fraunces,serif;text-align:center;color:var(--n);font-size:1.7rem}
+.sub{text-align:center;color:#8A8074;margin:6px 0 18px}
+.about,.contact{background:#fff;border-top:1px solid var(--ln);padding:40px 16px}
+.cols{max-width:900px;margin:auto;display:grid;gap:20px;grid-template-columns:1fr 1fr}
+@media(max-width:700px){.cols{grid-template-columns:1fr}.links{display:none}}
+footer{background:var(--nd);color:#E6D4A0;text-align:center;padding:22px;font-size:.85rem}
+.drawer{position:fixed;inset:0;background:rgba(15,27,51,.4);display:none;z-index:40}
+.drawer.open{display:block}
+.panel{position:absolute;right:0;top:0;bottom:0;width:min(360px,100%);background:#fff;padding:18px;overflow:auto}
+.row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--ln)}
+input,textarea{width:100%;padding:10px;border:1px solid var(--ln);border-radius:10px;margin:6px 0 12px}
+</style></head><body>
+<div class="top">Nơi văn hoá được chạm, nếm và mang về · Việt ✦ Lào</div>
+<header><nav class="nav">
+<a class="brand" href="#home"><img src="images/logo.svg" alt="logo"><span><b>Lotus & Champa</b><small>Kết nối văn hoá Việt Lào</small></span></a>
+<div class="links"><a href="#home">Trang chủ</a><a href="#sp">Sản phẩm</a><a href="#about">Câu chuyện</a><a href="#lh">Liên hệ</a></div>
+<button class="cart" onclick="tog()">Giỏ <span class="badge" id="bd">0</span></button>
+</nav></header>
+<section class="hero" id="home">
+<h1>Nơi văn hoá được<br>chạm, nếm và mang về</h1>
+<p class="lead">Đặc sản OCOP Quảng Ninh và quà bản sắc Lào — chạm, nếm, rồi mang về một mảnh văn hoá Việt Lào.</p>
+<a class="btn gold" href="#sp">Xem sản phẩm</a>
+<a class="btn navy" href="#about">Câu chuyện</a>
+</section>
+<section id="sp">
+<h2>Sản phẩm</h2>
+<p class="sub">OCOP · Bản sắc · Xu hướng · Quà lưu niệm</p>
+<div class="filters">
+<button class="chip on" onclick="filt(this,'all')">Tất cả</button>
+<button class="chip" onclick="filt(this,'vietnam')">Việt Nam</button>
+<button class="chip" onclick="filt(this,'lao')">Lào</button>
+<button class="chip" onclick="filt(this,'ocop')">OCOP</button>
+<button class="chip" onclick="filt(this,'ban-sac')">Bản sắc</button>
+<button class="chip" onclick="filt(this,'xu-huong')">Xu hướng</button>
+<button class="chip" onclick="filt(this,'qua')">Quà lưu niệm</button>
+</div>
+<div class="grid" id="grid"></div>
+</section>
+<section class="about" id="about">
+<h2>Hoa sen và hoa Champa</h2>
+<p class="sub">Dự án khởi nghiệp Trường Đại học Hạ Long — 2026</p>
+<div class="cols">
+<p>Lotus & Champa kết nối Việt Nam và Lào qua ẩm thực trải nghiệm, thương mại đặc sản và không gian văn hoá. Mỗi sản phẩm mang câu chuyện nghề và bản sắc vùng miền.</p>
+<p><b>Nhóm:</b> TS. Bế Thị Thu Huyền (GVHD), Trần Thị Thu, Trần Thị Xuân, Bùi Trường Giang, Paphaphone BOUTSOULIYA, Phiphakone Bounma.<br><br>
+<b>Liên hệ:</b> Trần Thị Thu · 0349 402 122 · tranthu74283@gmail.com</p>
+</div>
+</section>
+<section class="contact" id="lh">
+<h2>Liên hệ</h2>
+<p class="sub">Form demo — lưu trên trình duyệt</p>
+<form style="max-width:520px;margin:auto" onsubmit="ok(event)">
+<label>Họ tên</label><input required>
+<label>Zalo / điện thoại</label><input required>
+<label>Nội dung</label><textarea rows="3"></textarea>
+<button class="btn gold" type="submit">Gửi</button>
+<p id="msg" style="display:none;color:#4A6B3D;margin-top:8px">Đã nhận thông tin. Cảm ơn bạn!</p>
+</form>
+</section>
+<footer>© 2026 Lotus & Champa Company · Đại học Hạ Long</footer>
+<div class="drawer" id="dw" onclick="if(event.target.id==='dw')tog()">
+<div class="panel"><h3>Giỏ hàng</h3><div id="cl"></div><p id="tt" style="font-weight:700;margin:12px 0"></p>
+<button class="btn navy" onclick="out()">Đặt hàng demo</button></div></div>
+<script>
+const P=[
+{id:'bakich',name:'Rượu Ba Kích Ba Chẽ',c:'vietnam',g:'ocop',o:'Ba Chẽ, Quảng Ninh',p:180000,u:'chai 750ml',d:'Rượu ngâm ba kích tím — quà Tết Đông Bắc.',img:'images/p-vn-bakich-1.svg'},
+{id:'trahv',name:'Trà Hoa Vàng Ba Chẽ',c:'vietnam',g:'ocop',o:'Ba Chẽ, Quảng Ninh',p:80000,u:'hộp 30 túi',d:'Thanh nhiệt, chống oxy hóa.',img:'images/p-vn-trahoavang-1.svg'},
+{id:'mien',name:'Miến Dong Bình Liêu',c:'vietnam',g:'ocop',o:'Bình Liêu, Quảng Ninh',p:30000,u:'túi 200g',d:'Miến thủ công từ củ dong riềng.',img:'images/p-vn-miendong-1.svg'},
+{id:'matong',name:'Mật Ong Bình Liêu',c:'vietnam',g:'ocop',o:'Bình Liêu, Quảng Ninh',p:225000,u:'chai 500ml',d:'Mật ong rừng hoa hồi, sở, quế.',img:'images/p-vn-matong-bl-1.svg'},
+{id:'chamuc',name:'Chả Mực Hạ Long',c:'vietnam',g:'ocop',o:'Hạ Long',p:350000,u:'kg',d:'Chả mực giã tay từ mực tươi.',img:'images/p-vn-chamuc-1.svg'},
+{id:'sasung',name:'Sá Sùng Khô BOSA',c:'vietnam',g:'ocop',o:'Vân Đồn',p:750000,u:'50g',d:'Đặc sản biển “tiến vua”.',img:'images/p-vn-sasung-1.svg'},
+{id:'saset',name:'Set quà Sá Sùng BOSA',c:'vietnam',g:'ocop',o:'Quảng Ninh',p:4150000,u:'set 5 hộp',d:'Hộp quà cao cấp sá sùng.',img:'images/p-vn-sasung-set1.svg'},
+{id:'ruoc',name:'Ruốc Tôm Vân Đồn',c:'vietnam',g:'ban-sac',o:'Vân Đồn',p:160000,u:'hộp 150g',d:'Ruốc tôm biển tươi.',img:'images/p-vn-ruoctom-1.svg'},
+{id:'muc',name:'Mực Khô Cái Rồng',c:'vietnam',g:'ban-sac',o:'Vân Đồn',p:600000,u:'gói 0.5kg',d:'Mực phơi nắng truyền thống.',img:'images/p-vn-muckho-1.svg'},
+{id:'nemchua',name:'Nem Chua Thanh Hóa',c:'vietnam',g:'ban-sac',o:'Thanh Hóa',p:40000,u:'chục',d:'Nem lên men tự nhiên xứ Thanh.',img:'images/p-vn-nemchua-1.svg'},
+{id:'keodua',name:'Kẹo Dừa Bến Tre',c:'vietnam',g:'ban-sac',o:'Bến Tre',p:50000,u:'hộp',d:'Đặc sản xứ dừa hơn 100 năm.',img:'images/p-vn-keodua-1.svg'},
+{id:'bdx',name:'Bánh Đậu Xanh Hải Dương',c:'vietnam',g:'ban-sac',o:'Hải Dương',p:40000,u:'hộp',d:'Bánh mềm tan thưởng trà.',img:'images/p-vn-banhdauxanh-1.svg'},
+{id:'bgai',name:'Bánh Gai Ninh Giang',c:'vietnam',g:'ban-sac',o:'Hải Dương',p:8000,u:'chiếc',d:'Bánh nếp gói lá gai.',img:'images/p-vn-banhgai-1.svg'},
+{id:'nemnam',name:'Nem Nắm Giao Thủy',c:'vietnam',g:'ban-sac',o:'Nam Định',p:80000,u:'kg',d:'Nem nắm thính gạo rang.',img:'images/p-vn-nemnam-1.svg'},
+{id:'caphe',name:'Cà Phê Bolaven',c:'lao',g:'ban-sac',o:'Cao nguyên Bolaven',p:120000,u:'gói 250g',d:'Cà phê cao nguyên Nam Lào.',img:'images/p-lao-caphe-1.svg'},
+{id:'shan',name:'Trà Shan Tuyết Lào',c:'lao',g:'ban-sac',o:'Phongsaly',p:80000,u:'gói',d:'Chè cổ thụ núi cao Bắc Lào.',img:'images/p-lao-shantuyet-1.svg'},
+{id:'laolao',name:'Rượu Lao-Lao',c:'lao',g:'ban-sac',o:'Lào',p:100000,u:'chai',d:'Rượu nếp lễ hội Bunpimay.',img:'images/p-lao-laolao-1.svg'},
+{id:'laap',name:'Laap',c:'lao',g:'ban-sac',o:'Luang Prabang',p:80000,u:'phần',d:'Món may mắn của người Lào.',img:'images/p-lao-laap-1.svg'},
+{id:'khao',name:'Khao Niew',c:'lao',g:'ban-sac',o:'Bắc Lào',p:20000,u:'phần',d:'Xôi nếp — linh hồn ẩm thực Lào.',img:'images/p-lao-khaoniew-1.svg'},
+{id:'orlam',name:'Or Lam',c:'lao',g:'ban-sac',o:'Luang Prabang',p:80000,u:'phần',d:'Món hầm mắc khén cố đô.',img:'images/p-lao-orlam-1.svg'},
+{id:'thach',name:'Thạch Đen Cao Bằng',c:'vietnam',g:'xu-huong',o:'Cao Bằng',p:25000,u:'hộp',d:'Sương sáo thanh nhiệt.',img:'images/p-vn-thachden-1.svg'},
+{id:'yen',name:'Collagen Yến Sào',c:'vietnam',g:'xu-huong',o:'Hạ Long',p:250000,u:'hộp 10 gói',d:'Yến vịnh di sản + collagen.',img:'images/p-vn-collagenvensao-1.svg'},
+{id:'trasen',name:'Trà Sen Tây Hồ',c:'vietnam',g:'xu-huong',o:'Hà Nội',p:150000,u:'hộp',d:'Trà ướp sen Hồ Tây.',img:'images/p-vn-trasen-1.svg'},
+{id:'pia',name:'Bánh Pía Sóc Trăng',c:'vietnam',g:'xu-huong',o:'Sóc Trăng',p:60000,u:'hộp',d:'Giao thoa Kinh – Hoa – Khmer.',img:'images/p-vn-banhpia-1.svg'},
+{id:'kai',name:'Kaipen',c:'lao',g:'xu-huong',o:'Mekong',p:50000,u:'gói',d:'Rong sấy sông Mekong.',img:'images/p-lao-kaipen-1.svg'},
+{id:'chuoi',name:'Chuối rán sấy',c:'lao',g:'xu-huong',o:'Luang Prabang',p:15000,u:'túi',d:'Snack chuối giòn.',img:'images/p-lao-chuoiran-1.svg'},
+{id:'ngoc',name:'Ngọc trai Hạ Long',c:'vietnam',g:'qua',o:'Vịnh Hạ Long',p:500000,u:'viên',d:'Báu vật vịnh di sản.',img:'images/p-vn-ngoctrai-1.svg'},
+{id:'gom',name:'Gốm sứ Đông Triều',c:'vietnam',g:'qua',o:'Đông Triều',p:50000,u:'sản phẩm',d:'Gốm nung 1.300°C.',img:'images/p-vn-gomsu-1.svg'},
+{id:'than',name:'Than đá anthracite',c:'vietnam',g:'qua',o:'Hạ Long',p:100000,u:'tác phẩm',d:'Hồn đất mỏ Quảng Ninh.',img:'images/p-vn-thanda-1.svg'},
+{id:'non',name:'Nón Lá',c:'vietnam',g:'qua',o:'Huế / Hà Tây',p:80000,u:'chiếc',d:'Biểu tượng văn hoá Việt.',img:'images/p-vn-nonla-1.svg'},
+{id:'tui',name:'Túi đan mây',c:'vietnam',g:'qua',o:'Hội An',p:150000,u:'túi',d:'Thủ công mây tre.',img:'images/p-vn-tuidanmay-1.svg'},
+{id:'cot',name:'Chùa Một Cột mini',c:'vietnam',g:'qua',o:'Hà Nội',p:100000,u:'mô hình',d:'Biểu tượng kiến trúc Thăng Long.',img:'images/p-vn-chuamotcot-1.svg'},
+{id:'khan',name:'Khăn truyền thống Lào',c:'lao',g:'qua',o:'Sầm Nưa',p:700000,u:'khăn',d:'Dệt họa tiết Naga.',img:'images/p-lao-khantruyen-1.svg'},
+{id:'sinh',name:'Chân váy Sinh Lào',c:'lao',g:'qua',o:'Hủa Phăn',p:1000000,u:'váy',d:'Trang phục truyền thống Lào.',img:'images/p-lao-chanvay-1.svg'},
+{id:'that',name:'Mô hình Thạt Luổng',c:'lao',g:'qua',o:'Viêng Chăn',p:150000,u:'mô hình',d:'Tháp thiêng của Lào.',img:'images/p-lao-thatluong-1.svg'}
+];
+const GL={ocop:'OCOP','ban-sac':'Bản sắc','xu-huong':'Xu hướng',qua:'Quà'};
+const CL={vietnam:'Việt Nam',lao:'Lào'};
+let f='all', cart=JSON.parse(localStorage.getItem('lc2')||'[]');
+const v=n=>n.toLocaleString('vi-VN')+' đ';
+function draw(){
+  const list=P.filter(x=>f==='all'||x.c===f||x.g===f);
+  grid.innerHTML=list.map(x=>`<article class="card"><div class="pic"><img src="${x.img}" alt="${x.name}"></div><div class="body"><div class="tag">${CL[x.c]} · ${GL[x.g]}</div><h3>${x.name}</h3><div class="desc">${x.d} · ${x.o}</div><div class="price">${v(x.p)} / ${x.u}</div><button class="add" onclick="add('${x.id}')">Thêm vào giỏ</button></div></article>`).join('');
+}
+function filt(b,x){f=x;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===b));draw()}
+function add(id){const x=P.find(i=>i.id===id);const i=cart.find(t=>t.id===id);if(i)i.q++;else cart.push({id,n:x.name,p:x.p,q:1});sv()}
+function sv(){localStorage.setItem('lc2',JSON.stringify(cart));bd.textContent=cart.reduce((s,i)=>s+i.q,0);cl.innerHTML=cart.map(i=>`<div class="row"><span>${i.n} × ${i.q}</span><b>${v(i.p*i.q)}</b></div>`).join('')||'<p>Giỏ trống</p>';tt.textContent='Tổng: '+v(cart.reduce((s,i)=>s+i.p*i.q,0))}
+function tog(){dw.classList.toggle('open');sv()}
+function out(){if(!cart.length)return alert('Giỏ trống');alert('Đơn demo đã lưu. Cảm ơn bạn!');cart=[];sv()}
+function ok(e){e.preventDefault();msg.style.display='block'}
+draw();sv();
+</script></body></html>
