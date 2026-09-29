@@ -2,18 +2,179 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8"/>
-<meta http-equiv="refresh" content="0; url=https://lotus-champa.netlify.app/"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lotus & Champa</title>
-<link rel="canonical" href="https://lotus-champa.netlify.app/"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Lotus & Champa company — Nơi văn hoá được chạm, nếm và mang về</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:Georgia,serif;background:#FAF5EB;color:#1B2A4E;text-align:center;padding:24px}
-a{color:#A8893F}
+:root{--gold:#C9A961;--gold2:#A8893F;--navy:#1B2A4E;--nd:#0F1B33;--bg:#FBF8F1;--ln:#E5DCC8;--t:#B85C3A;--ink:#1A1A1A;--muted:#8A8074}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{font-family:inherit;border:0;background:0;cursor:pointer}
+.ticker{background:var(--nd);color:var(--gold);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;text-align:center}
+header{position:sticky;top:0;z-index:30;background:rgba(251,248,241,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln)}
+.row1{max-width:1180px;margin:auto;display:flex;align-items:center;gap:12px;padding:10px 16px}
+.search{flex:1;display:flex;border:1px solid var(--ln);border-radius:999px;background:#fff;overflow:hidden}
+.search input{flex:1;border:0;padding:9px 14px;outline:0;font:inherit}
+.search button{background:var(--nd);color:#fff;padding:0 16px}
+.brand{display:flex;align-items:center;gap:10px;min-width:230px}
+.brand img{width:46px;height:46px;border-radius:50%;object-fit:cover;background:#fff;border:1px solid var(--ln)}
+.brand b{font-family:Fraunces,serif;color:var(--navy);font-size:1.15rem}
+.brand small{display:block;color:var(--gold2);font-style:italic;font-size:.75rem}
+.acts{display:flex;align-items:center;gap:10px}
+.lang{border:1px solid var(--ln);border-radius:999px;padding:6px 10px;background:#fff;font-size:.85rem}
+.cart{background:var(--navy);color:#fff;border-radius:999px;padding:8px 14px;position:relative}
+.badge{position:absolute;top:-7px;right:-7px;background:var(--t);color:#fff;border-radius:99px;min-width:18px;height:18px;font-size:11px;display:grid;place-items:center}
+.nav{max-width:1180px;margin:auto;display:flex;gap:4px;padding:0 16px 8px;overflow:auto}
+.nav a{padding:8px 10px;font-size:.86rem;white-space:nowrap;border-radius:8px}
+.nav a:hover{background:#fff;color:var(--navy);font-weight:600}
+.hero{max-width:1180px;margin:auto;padding:28px 16px 10px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.pill{display:inline-block;background:#fff;border:1px solid var(--ln);color:var(--gold2);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:999px;margin-bottom:12px}
+h1{font-family:Fraunces,serif;color:var(--navy);font-size:clamp(1.8rem,4.6vw,3.2rem);line-height:1.12}
+h1 em{font-style:italic;color:var(--gold2)}
+.lead{margin:14px 0 18px;color:#444;max-width:520px}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 18px;border-radius:999px;font-weight:600}
+.gold{background:var(--gold);color:var(--nd)}.navy{background:var(--navy);color:#fff}.ghost{border:1px solid var(--navy);color:var(--navy);background:#fff}
+.poster{background:var(--navy);border-radius:18px;padding:10px;box-shadow:0 20px 50px rgba(27,42,78,.18)}
+.poster img{border-radius:12px;width:100%;height:340px;object-fit:cover}
+.stats{max-width:1180px;margin:auto;padding:8px 16px 24px;display:flex;gap:28px;flex-wrap:wrap}
+.stats b{display:block;font-family:Fraunces,serif;font-size:1.6rem;color:var(--navy)}
+.stats span{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.wrap{max-width:1180px;margin:auto;padding:10px 16px 48px}
+h2{font-family:Fraunces,serif;color:var(--navy);font-size:1.7rem}
+.sub{color:var(--muted);margin:4px 0 16px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chip{padding:7px 12px;border:1px solid var(--ln);border-radius:99px;background:#fff;font-size:.84rem}
+.chip.on{background:var(--navy);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--ln);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 20px rgba(27,42,78,.07)}
+.pic{height:150px;display:grid;place-items:center;color:#fff;font-family:Fraunces,serif;text-align:center;padding:10px}
+.body{padding:12px;display:flex;flex-direction:column;flex:1}
+.tag{font-size:11px;color:var(--gold2);text-transform:uppercase;letter-spacing:.06em}
+h3{color:var(--navy);font-size:.98rem;margin:4px 0}
+.desc{font-size:.8rem;color:#666;flex:1}
+.price{font-weight:600;margin:8px 0;color:var(--navy)}
+.add{background:var(--navy);color:#fff;border-radius:10px;padding:8px}
+.about{background:#fff;border-top:1px solid var(--ln);padding:40px 16px}
+.cols{max-width:900px;margin:auto;display:grid;gap:20px;grid-template-columns:1fr 1fr}
+footer{background:var(--nd);color:#E6D4A0;text-align:center;padding:22px;font-size:.85rem}
+.drawer{position:fixed;inset:0;background:rgba(15,27,51,.4);display:none;z-index:40}
+.drawer.open{display:block}
+.panel{position:absolute;right:0;top:0;bottom:0;width:min(360px,100%);background:#fff;padding:18px;overflow:auto}
+.line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--ln)}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.brand small{display:none}.poster img{height:220px}}
 </style>
 </head>
 <body>
-<p>กำลังเปิดเว็บเต็ม Lotus & Champa…</p>
-<p><a href="https://lotus-champa.netlify.app/">https://lotus-champa.netlify.app/</a></p>
-<script>location.replace("https://lotus-champa.netlify.app/");</script>
-</body>
-</html>
+<div class="ticker">Miễn phí vận chuyển cho đơn từ 500.000₫ ✦ Quà tặng văn hoá Lào – Việt chính gốc ✦ Hỗ trợ giao hàng toàn quốc</div>
+<header>
+  <div class="row1">
+    <form class="search" onsubmit="return goSearch(event)">
+      <input id="q" placeholder="Tìm sản phẩm văn hoá, đặc sản…"/>
+      <button type="submit">Tìm</button>
+    </form>
+    <a class="brand" href="#home">
+      <img src="images/logo.svg" alt="logo"/>
+      <span><b>Lotus & Champa</b><small>Nơi văn hoá được chạm, nếm và mang về</small></span>
+    </a>
+    <div class="acts">
+      <span class="lang">🇻🇳 VI</span>
+      <button class="cart" onclick="tog()">Giỏ <span class="badge" id="bd">0</span></button>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="#sp" onclick="filt(null,'all')">Tất cả sản phẩm</a>
+    <a href="#sp" onclick="filt(null,'lao')">Sản phẩm Lào</a>
+    <a href="#sp" onclick="filt(null,'vietnam')">Sản phẩm Việt Nam</a>
+    <a href="#sp" onclick="filt(null,'ocop')">Khuyến mãi / OCOP</a>
+    <a href="#about">Blog văn hoá</a>
+    <a href="#about">Về chúng tôi</a>
+    <a href="#about">Business Model</a>
+    <a href="#about">Liên hệ</a>
+  </nav>
+</header>
+<section class="hero" id="home">
+  <div>
+    <div class="pill">Cội nguồn văn hoá · Đông Nam Á</div>
+    <h1>Từ dòng Mekong,<br>một <em>hành trình quà tặng</em><br>mang theo cả hai bờ văn hoá</h1>
+    <p class="lead">Lotus đại diện cho Việt Nam, Champa đại diện cho Lào. Chúng tôi gói lại câu chuyện đó trong từng sản phẩm thủ công, đặc sản và quà tặng có nguồn gốc rõ ràng.</p>
+    <div class="btns">
+      <a class="btn gold" href="#sp">Mua ngay →</a>
+      <a class="btn ghost" href="#about">Khám phá câu chuyện</a>
+    </div>
+  </div>
+  <div class="poster"><img src="images/p-vn-nemchua-1.svg" alt="Nem chua Thanh Hóa"/></div>
+</section>
+<div class="stats">
+  <div><b>35+</b><span>Sản phẩm chính gốc</span></div>
+  <div><b>2</b><span>Quốc gia phục vụ</span></div>
+  <div><b>4</b><span>Nhóm sản phẩm</span></div>
+</div>
+<section class="wrap" id="sp">
+  <h2>Sản phẩm</h2>
+  <p class="sub">OCOP · Bản sắc · Xu hướng · Quà lưu niệm</p>
+  <div class="filters">
+    <button class="chip on" data-f="all" onclick="filt(this,'all')">Tất cả</button>
+    <button class="chip" data-f="vietnam" onclick="filt(this,'vietnam')">Việt Nam</button>
+    <button class="chip" data-f="lao" onclick="filt(this,'lao')">Lào</button>
+    <button class="chip" data-f="ocop" onclick="filt(this,'ocop')">OCOP</button>
+    <button class="chip" data-f="ban-sac" onclick="filt(this,'ban-sac')">Bản sắc</button>
+    <button class="chip" data-f="xu-huong" onclick="filt(this,'xu-huong')">Xu hướng</button>
+    <button class="chip" data-f="qua" onclick="filt(this,'qua')">Quà lưu niệm</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+<section class="about" id="about">
+  <h2 style="text-align:center">Hoa sen và hoa Champa</h2>
+  <p class="sub" style="text-align:center">Dự án khởi nghiệp Trường Đại học Hạ Long — 2026</p>
+  <div class="cols">
+    <p>Lotus & Champa kết nối Việt Nam và Lào qua ẩm thực trải nghiệm, thương mại đặc sản và không gian văn hoá.</p>
+    <p><b>Nhóm:</b> TS. Bế Thị Thu Huyền (GVHD), Trần Thị Thu, Trần Thị Xuân, Bùi Trường Giang, Paphaphone BOUTSOULIYA, Phiphakone Bounma.<br><br>
+    <b>Liên hệ:</b> Trần Thị Thu · 0349 402 122 · tranthu74283@gmail.com</p>
+  </div>
+</section>
+<footer>© 2026 Lotus & Champa Company · Đại học Hạ Long · GitHub: phiphakone/Lotus-Champa</footer>
+<div class="drawer" id="dw" onclick="if(event.target.id==='dw')tog()">
+  <div class="panel"><h3>Giỏ hàng</h3><div id="cl"></div><p id="tt" style="font-weight:700;margin:12px 0"></p>
+  <button class="btn navy" onclick="out()">Đặt hàng demo</button></div>
+</div>
+<script>
+const P=[
+{id:'bakich',name:'Rượu Ba Kích Ba Chẽ',c:'vietnam',g:'ocop',o:'Ba Chẽ, Quảng Ninh',p:180000,u:'chai 750ml',d:'Rượu ngâm ba kích tím.'},
+{id:'trahv',name:'Trà Hoa Vàng Ba Chẽ',c:'vietnam',g:'ocop',o:'Ba Chẽ, Quảng Ninh',p:80000,u:'hộp 30 túi',d:'Thanh nhiệt, chống oxy hóa.'},
+{id:'mien',name:'Miến Dong Bình Liêu',c:'vietnam',g:'ocop',o:'Bình Liêu, Quảng Ninh',p:30000,u:'túi 200g',d:'Miến thủ công từ củ dong riềng.'},
+{id:'matong',name:'Mật Ong Bình Liêu',c:'vietnam',g:'ocop',o:'Bình Liêu, Quảng Ninh',p:225000,u:'chai 500ml',d:'Mật ong rừng hoa hồi, sở, quế.'},
+{id:'chamuc',name:'Chả Mực Hạ Long',c:'vietnam',g:'ocop',o:'Hạ Long',p:350000,u:'kg',d:'Chả mực giã tay từ mực tươi.'},
+{id:'sasung',name:'Sá Sùng Khô BOSA',c:'vietnam',g:'ocop',o:'Vân Đồn',p:750000,u:'50g',d:'Đặc sản biển tiến vua.'},
+{id:'nemchua',name:'Nem Chua Thanh Hóa',c:'vietnam',g:'ban-sac',o:'Thanh Hóa',p:40000,u:'chục',d:'Nem lên men tự nhiên xứ Thanh.'},
+{id:'keodua',name:'Kẹo Dừa Bến Tre',c:'vietnam',g:'ban-sac',o:'Bến Tre',p:50000,u:'hộp',d:'Đặc sản xứ dừa.'},
+{id:'caphe',name:'Cà Phê Bolaven',c:'lao',g:'ban-sac',o:'Cao nguyên Bolaven',p:120000,u:'gói 250g',d:'Cà phê cao nguyên Nam Lào.'},
+{id:'shan',name:'Trà Shan Tuyết Lào',c:'lao',g:'ban-sac',o:'Phongsaly',p:80000,u:'gói',d:'Chè cổ thụ núi cao Bắc Lào.'},
+{id:'laolao',name:'Rượu Lao-Lao',c:'lao',g:'ban-sac',o:'Lào',p:100000,u:'chai',d:'Rượu nếp lễ hội Bunpimay.'},
+{id:'laap',name:'Laap',c:'lao',g:'ban-sac',o:'Luang Prabang',p:80000,u:'phần',d:'Món may mắn của người Lào.'},
+{id:'khao',name:'Khao Niew',c:'lao',g:'ban-sac',o:'Bắc Lào',p:20000,u:'phần',d:'Xôi nếp — linh hồn ẩm thực Lào.'},
+{id:'kai',name:'Kaipen',c:'lao',g:'xu-huong',o:'Mekong',p:50000,u:'gói',d:'Rong sấy sông Mekong.'},
+{id:'non',name:'Nón Lá',c:'vietnam',g:'qua',o:'Huế',p:80000,u:'chiếc',d:'Biểu tượng văn hoá Việt.'},
+{id:'khan',name:'Khăn truyền thống Lào',c:'lao',g:'qua',o:'Sầm Nưa',p:700000,u:'khăn',d:'Dệt họa tiết Naga.'},
+{id:'that',name:'Mô hình Thạt Luổng',c:'lao',g:'qua',o:'Viêng Chăn',p:150000,u:'mô hình',d:'Tháp thiêng của Lào.'},
+{id:'trasen',name:'Trà Sen Tây Hồ',c:'vietnam',g:'xu-huong',o:'Hà Nội',p:150000,u:'hộp',d:'Trà ướp sen Hồ Tây.'}
+];
+const GL={ocop:'OCOP','ban-sac':'Bản sắc','xu-huong':'Xu hướng',qua:'Quà'};
+const CL={vietnam:'Việt Nam',lao:'Lào'};
+const COL={vietnam:'#1B2A4E',lao:'#4A6B3D',ocop:'#A8893F','ban-sac':'#B85C3A','xu-huong':'#2C3E66',qua:'#6B8E5A'};
+let f='all', cart=JSON.parse(localStorage.getItem('lc3')||'[]');
+const v=n=>n.toLocaleString('vi-VN')+' ₫';
+function draw(){
+  const q=(document.getElementById('q').value||'').toLowerCase();
+  const list=P.filter(x=>(f==='all'||x.c===f||x.g===f) && (!q || (x.name+x.d+x.o).toLowerCase().includes(q)));
+  grid.innerHTML=list.map(x=>`<article class="card"><div class="pic" style="background:linear-gradient(160deg,${COL[x.c]},${COL[x.g]})">${x.c==='lao'?'🇱🇦':'🇻🇳'}<br>${x.name}</div><div class="body"><div class="tag">${CL[x.c]} · ${GL[x.g]}</div><h3>${x.name}</h3><div class="desc">${x.d} · ${x.o}</div><div class="price">${v(x.p)} / ${x.u}</div><button class="add" onclick="add('${x.id}')">Thêm vào giỏ</button></div></article>`).join('') || '<p>Không tìm thấy sản phẩm.</p>';
+}
+function filt(b,x){f=x;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c.dataset.f===x));draw();return false;}
+function add(id){const x=P.find(i=>i.id===id);const i=cart.find(t=>t.id===id);if(i)i.q++;else cart.push({id,n:x.name,p:x.p,q:1});sv()}
+function sv(){localStorage.setItem('lc3',JSON.stringify(cart));bd.textContent=cart.reduce((s,i)=>s+i.q,0);cl.innerHTML=cart.map(i=>`<div class="line"><span>${i.n} × ${i.q}</span><b>${v(i.p*i.q)}</b></div>`).join('')||'<p>Giỏ trống</p>';tt.textContent='Tổng: '+v(cart.reduce((s,i)=>s+i.p*i.q,0))}
+function tog(){dw.classList.toggle('open');sv()}
+function out(){if(!cart.length)return alert('Giỏ trống');alert('Đơn demo đã lưu. Cảm ơn bạn!');cart=[];sv();dw.classList.remove('open')}
+function goSearch(e){e.preventDefault();draw();location.hash='#sp';return false}
+draw();sv();
+</script>
+</body></html>
